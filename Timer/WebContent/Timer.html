@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+	div{
+		width:20%;
+		margin:0 auto;
+		margin-top:20px;
+	}
+	#timer{
+		margin-bottom:20px;
+	}
+</style>
+<script>
+	
+	var m = 0;
+	var s = 30;
+	var clear = setInterval(function() {
+		runTimer()
+	}, 1000);
+	function runTimer() {
+		
+		if(s==0 && m==0){
+			stopTimer();
+		}
+		else if (s == 0) {
+			m = m - 1;
+			s = 59;
+		}
+		else
+			s = s - 1;
+		if(m<10 && s<10)
+			document.getElementById("timer").innerHTML = "0"+m + ":" +"0"+ s;
+		else if(m<10)
+			document.getElementById("timer").innerHTML = "0"+m + ":" +s;
+		else if(s<10)
+			document.getElementById("timer").innerHTML = m + ":" +"0"+ s;
+		else
+			document.getElementById("timer").innerHTML = m + ":"+ s;
+		
+		
+		
+	}
+	
+	function stopTimer(){
+		clearInterval(clear);
+		document.getElementById("finishbtn").disabled="true";
+	}
+</script>
+</head>
+<body>
+
+	<div>
+	<span id="timer"></span>
+	<br/>
+	<button onclick="stopTimer()" id="finishbtn">finish</button>
+	</div>
+</body>
+</html>
