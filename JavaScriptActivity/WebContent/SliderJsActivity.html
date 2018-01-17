@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+body{
+background-color: wheat;
+}
+
+div{
+background-color: aqua;
+}
+
+#id1{
+margin:0 auto;
+width : 135px;
+background-color: white;
+
+}
+
+#id3{
+
+width: 500px;
+margin: 0 auto;
+font-size: 10px; 
+border
+}
+
+</style>
+<script>
+//var slider = document.getElementById("id2");
+//var output = document.getElementById("id3");
+//output.style.fontSize = output.value;
+
+function zoom(){
+	document.getElementById("id3").style.fontSize = document.getElementById("id2").value +"px";
+
+//	var currentFont = div.style.fontSize.replace("px", "");
+
+ //   div.style.fontSize = parseInt(currentFont) + parseInt(size) + "px";
+}
+
+</script>
+</head>
+
+<body>
+<h1>Changing font size using slider</h1>
+
+<section>
+<div id="id3">
+Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+</div>
+<div id="id1">
+  <input type="range" min="10" max="100" value="1" id="id2" onchange="zoom()">
+</div>
+</section>
+
+</body>
+</html>
